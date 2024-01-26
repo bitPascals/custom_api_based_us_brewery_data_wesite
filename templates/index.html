@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}Brewery Data in USA{% endblock %}
+
+{% block content %}
+ <h1 class="display-1">Brewery Data In The United States</h1>
+{% for brewery in breweries: %}
+<div class="p-5 text-center bg-body-tertiary rounded-3">
+    <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><use xlink:href="#bootstrap"></use></svg>
+    <h1 class="text-body-emphasis">{{ brewery.name }}</h1>
+
+    <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+     Country: {{ brewery.country }}
+    <span class="badge bg-primary rounded-pill">{{ brewery.brewery_type }}</span>
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    State: {{ brewery.state }}
+  </li>
+
+   <li class="list-group-item d-flex justify-content-between align-items-center">
+    State Province: {{ brewery.state_province }}
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      Address: {{ brewery.address_1 }}
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      Phone: {{ brewery.phone }}
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      Latitude: {{ brewery.latitude }}
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      Longitude: {{ brewery.postal_code }}
+  </li>
+</ul><br/>
+
+    <div class="d-inline-flex gap-2 mb-5">
+      <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"
+         href="{{ brewery.website_url }}" type="button">Website</a>
+    </div>
+  </div>
+
+{% endfor %}
+
+
+{% endblock %}

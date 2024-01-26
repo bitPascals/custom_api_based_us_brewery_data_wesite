@@ -1,0 +1,17 @@
+h1{
+    text-align: center !important;
+    color: #B2533E;
+
+}
+
+.rounded-pill{
+    background: #B2533E !important;
+    border: 0;
+    font-weight: bold;
+}
+
+h1.text-body-emphasis{
+    color: #B2533E !important;
+    margin-bottom: 10px !important;
+    font-weight: bold;
+}
